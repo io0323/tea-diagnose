@@ -1,0 +1,33 @@
+{
+  "Inputs" : {
+    "temperature" : {
+      "MLFeatureShortDescription" : ""
+    },
+    "caffeine" : {
+      "MLFeatureShortDescription" : ""
+    },
+    "reason" : {
+      "MLFeatureShortDescription" : ""
+    },
+    "time" : {
+      "MLFeatureShortDescription" : ""
+    },
+    "mood" : {
+      "MLFeatureShortDescription" : ""
+    }
+  },
+  "Outputs" : {
+    "recommendationProbability" : {
+      "MLFeatureShortDescription" : ""
+    },
+    "recommendation" : {
+      "MLFeatureShortDescription" : ""
+    }
+  },
+  "TrainingInputs" : {
+
+  },
+  "States" : {
+
+  }
+}
