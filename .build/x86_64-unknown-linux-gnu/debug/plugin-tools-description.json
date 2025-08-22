@@ -1,0 +1,720 @@
+{
+  "builtTestProducts" : [
+    {
+      "binaryPath" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageTests.xctest",
+      "packagePath" : "/home/runner/work/tea-diagnose/tea-diagnose",
+      "productName" : "TeaDiagnosePackageTests"
+    }
+  ],
+  "copyCommands" : {
+
+  },
+  "explicitTargetDependencyImportCheckingMode" : {
+    "none" : {
+
+    }
+  },
+  "generatedSourceTargetSet" : [
+    "TeaDiagnosePackageDiscoveredTests"
+  ],
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+    "C.TeaDiagnose-x86_64-unknown-linux-gnu-debug.module" : {
+      "executable" : "/usr/share/swift/usr/bin/swiftc",
+      "fileList" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/sources",
+      "importPath" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/tea-diagnose/tea-diagnose/TeaDiagnoseApp/ContentView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/tea-diagnose/tea-diagnose/TeaDiagnoseApp/ModelHandler.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/tea-diagnose/tea-diagnose/TeaDiagnoseApp/TeaCommentGenerator.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/tea-diagnose/tea-diagnose/TeaDiagnoseApp/TeaDiagnoseApp.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/swift-version--1BFCD5C06E9F820A.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "TeaDiagnose",
+      "moduleOutputPath" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/Modules/TeaDiagnose.swiftmodule",
+      "objects" : [
+        "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/ContentView.swift.o",
+        "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/ModelHandler.swift.o",
+        "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/TeaCommentGenerator.swift.o",
+        "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/TeaDiagnoseApp.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "x86_64-unknown-linux-gnu",
+        "-v",
+        "-enable-batch-mode",
+        "-index-store-path",
+        "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j4",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-module-cache-path",
+        "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-color-diagnostics",
+        "-swift-version",
+        "5",
+        "-g",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-Xcc",
+        "-fno-omit-frame-pointer"
+      ],
+      "outputFileMapPath" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/ContentView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/ModelHandler.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/TeaCommentGenerator.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/TeaDiagnoseApp.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/Modules/TeaDiagnose.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/home/runner/work/tea-diagnose/tea-diagnose/TeaDiagnoseApp/ContentView.swift",
+        "/home/runner/work/tea-diagnose/tea-diagnose/TeaDiagnoseApp/ModelHandler.swift",
+        "/home/runner/work/tea-diagnose/tea-diagnose/TeaDiagnoseApp/TeaCommentGenerator.swift",
+        "/home/runner/work/tea-diagnose/tea-diagnose/TeaDiagnoseApp/TeaDiagnoseApp.swift"
+      ],
+      "tempsPath" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.TeaDiagnosePackageDiscoveredTests-x86_64-unknown-linux-gnu-debug.module" : {
+      "executable" : "/usr/share/swift/usr/bin/swiftc",
+      "fileList" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageDiscoveredTests.build/sources",
+      "importPath" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageDiscoveredTests.derived/TeaDiagnoseTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageDiscoveredTests.derived/all-discovered-tests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/swift-version--1BFCD5C06E9F820A.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/Modules/TeaDiagnoseTests.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageDiscoveredTests.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "TeaDiagnosePackageDiscoveredTests",
+      "moduleOutputPath" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/Modules/TeaDiagnosePackageDiscoveredTests.swiftmodule",
+      "objects" : [
+        "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageDiscoveredTests.build/TeaDiagnoseTests.swift.o",
+        "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageDiscoveredTests.build/all-discovered-tests.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "x86_64-unknown-linux-gnu",
+        "-v",
+        "-enable-batch-mode",
+        "-index-store-path",
+        "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-Xfrontend",
+        "-enable-cross-import-overlays",
+        "-j4",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-module-cache-path",
+        "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-color-diagnostics",
+        "-g",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-Xcc",
+        "-fno-omit-frame-pointer"
+      ],
+      "outputFileMapPath" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageDiscoveredTests.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageDiscoveredTests.build/TeaDiagnoseTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageDiscoveredTests.build/all-discovered-tests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/Modules/TeaDiagnosePackageDiscoveredTests.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageDiscoveredTests.derived/TeaDiagnoseTests.swift",
+        "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageDiscoveredTests.derived/all-discovered-tests.swift"
+      ],
+      "tempsPath" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageDiscoveredTests.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.TeaDiagnosePackageTests-x86_64-unknown-linux-gnu-debug.module" : {
+      "executable" : "/usr/share/swift/usr/bin/swiftc",
+      "fileList" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageTests.build/sources",
+      "importPath" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageTests.derived/runner.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/swift-version--1BFCD5C06E9F820A.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/Modules/TeaDiagnoseTests.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/Modules/TeaDiagnosePackageDiscoveredTests.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageTests.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "TeaDiagnosePackageTests",
+      "moduleOutputPath" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/Modules/TeaDiagnosePackageTests.swiftmodule",
+      "objects" : [
+        "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageTests.build/runner.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "x86_64-unknown-linux-gnu",
+        "-v",
+        "-enable-batch-mode",
+        "-index-store-path",
+        "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-Xfrontend",
+        "-enable-cross-import-overlays",
+        "-j4",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-module-cache-path",
+        "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-color-diagnostics",
+        "-g",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-Xcc",
+        "-fno-omit-frame-pointer"
+      ],
+      "outputFileMapPath" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageTests.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageTests.build/runner.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/Modules/TeaDiagnosePackageTests.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageTests.derived/runner.swift"
+      ],
+      "tempsPath" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageTests.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.TeaDiagnoseTests-x86_64-unknown-linux-gnu-debug.module" : {
+      "executable" : "/usr/share/swift/usr/bin/swiftc",
+      "fileList" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnoseTests.build/sources",
+      "importPath" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/tea-diagnose/tea-diagnose/TeaDiagnoseAppTests/TeaDiagnoseAppTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/swift-version--1BFCD5C06E9F820A.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/Modules/TeaDiagnose.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnoseTests.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "TeaDiagnoseTests",
+      "moduleOutputPath" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/Modules/TeaDiagnoseTests.swiftmodule",
+      "objects" : [
+        "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnoseTests.build/TeaDiagnoseAppTests.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "x86_64-unknown-linux-gnu",
+        "-v",
+        "-enable-batch-mode",
+        "-index-store-path",
+        "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-Xfrontend",
+        "-enable-cross-import-overlays",
+        "-j4",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-module-cache-path",
+        "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-color-diagnostics",
+        "-swift-version",
+        "5",
+        "-g",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-Xcc",
+        "-fno-omit-frame-pointer"
+      ],
+      "outputFileMapPath" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnoseTests.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnoseTests.build/TeaDiagnoseAppTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/Modules/TeaDiagnoseTests.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/home/runner/work/tea-diagnose/tea-diagnose/TeaDiagnoseAppTests/TeaDiagnoseAppTests.swift"
+      ],
+      "tempsPath" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnoseTests.build",
+      "wholeModuleOptimization" : false
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "swiftTargetScanArgs" : {
+    "TeaDiagnose" : [
+      "/usr/share/swift/usr/bin/swiftc",
+      "-module-name",
+      "TeaDiagnose",
+      "-incremental",
+      "-c",
+      "/home/runner/work/tea-diagnose/tea-diagnose/TeaDiagnoseApp/ContentView.swift",
+      "/home/runner/work/tea-diagnose/tea-diagnose/TeaDiagnoseApp/ModelHandler.swift",
+      "/home/runner/work/tea-diagnose/tea-diagnose/TeaDiagnoseApp/TeaCommentGenerator.swift",
+      "/home/runner/work/tea-diagnose/tea-diagnose/TeaDiagnoseApp/TeaDiagnoseApp.swift",
+      "-I",
+      "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/Modules",
+      "-target",
+      "x86_64-unknown-linux-gnu",
+      "-v",
+      "-enable-batch-mode",
+      "-index-store-path",
+      "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-j4",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-module-cache-path",
+      "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-color-diagnostics",
+      "-swift-version",
+      "5",
+      "-g",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-Xcc",
+      "-fno-omit-frame-pointer",
+      "-driver-use-frontend-path",
+      "/usr/share/swift/usr/bin/swiftc"
+    ],
+    "TeaDiagnosePackageDiscoveredTests" : [
+      "/usr/share/swift/usr/bin/swiftc",
+      "-module-name",
+      "TeaDiagnosePackageDiscoveredTests",
+      "-incremental",
+      "-c",
+      "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageDiscoveredTests.derived/TeaDiagnoseTests.swift",
+      "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageDiscoveredTests.derived/all-discovered-tests.swift",
+      "-I",
+      "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/Modules",
+      "-target",
+      "x86_64-unknown-linux-gnu",
+      "-v",
+      "-enable-batch-mode",
+      "-index-store-path",
+      "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-Xfrontend",
+      "-enable-cross-import-overlays",
+      "-j4",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-module-cache-path",
+      "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-color-diagnostics",
+      "-g",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-Xcc",
+      "-fno-omit-frame-pointer",
+      "-driver-use-frontend-path",
+      "/usr/share/swift/usr/bin/swiftc"
+    ],
+    "TeaDiagnosePackageTests" : [
+      "/usr/share/swift/usr/bin/swiftc",
+      "-module-name",
+      "TeaDiagnosePackageTests",
+      "-incremental",
+      "-c",
+      "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageTests.derived/runner.swift",
+      "-I",
+      "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/Modules",
+      "-target",
+      "x86_64-unknown-linux-gnu",
+      "-v",
+      "-enable-batch-mode",
+      "-index-store-path",
+      "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-Xfrontend",
+      "-enable-cross-import-overlays",
+      "-j4",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-module-cache-path",
+      "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-color-diagnostics",
+      "-g",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-Xcc",
+      "-fno-omit-frame-pointer",
+      "-driver-use-frontend-path",
+      "/usr/share/swift/usr/bin/swiftc"
+    ],
+    "TeaDiagnoseTests" : [
+      "/usr/share/swift/usr/bin/swiftc",
+      "-module-name",
+      "TeaDiagnoseTests",
+      "-incremental",
+      "-c",
+      "/home/runner/work/tea-diagnose/tea-diagnose/TeaDiagnoseAppTests/TeaDiagnoseAppTests.swift",
+      "-I",
+      "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/Modules",
+      "-target",
+      "x86_64-unknown-linux-gnu",
+      "-v",
+      "-enable-batch-mode",
+      "-index-store-path",
+      "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-Xfrontend",
+      "-enable-cross-import-overlays",
+      "-j4",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-module-cache-path",
+      "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-color-diagnostics",
+      "-swift-version",
+      "5",
+      "-g",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-Xcc",
+      "-fno-omit-frame-pointer",
+      "-driver-use-frontend-path",
+      "/usr/share/swift/usr/bin/swiftc"
+    ]
+  },
+  "targetDependencyMap" : {
+    "TeaDiagnose" : [
+
+    ],
+    "TeaDiagnosePackageDiscoveredTests" : [
+      "TeaDiagnoseTests",
+      "TeaDiagnose"
+    ],
+    "TeaDiagnosePackageTests" : [
+      "TeaDiagnosePackageDiscoveredTests",
+      "TeaDiagnoseTests",
+      "TeaDiagnose"
+    ],
+    "TeaDiagnoseTests" : [
+      "TeaDiagnose"
+    ]
+  },
+  "testDiscoveryCommands" : {
+    "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageDiscoveredTests.derived/all-discovered-tests.swift" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnoseTests.build/TeaDiagnoseAppTests.swift.o"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageDiscoveredTests.derived/TeaDiagnoseTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageDiscoveredTests.derived/all-discovered-tests.swift"
+        }
+      ]
+    }
+  },
+  "testEntryPointCommands" : {
+    "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageTests.derived/runner.swift" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/Modules/TeaDiagnosePackageDiscoveredTests.swiftmodule"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageTests.derived/runner.swift"
+        }
+      ]
+    }
+  },
+  "traitConfiguration" : {
+    "enableAllTraits" : false
+  },
+  "writeCommands" : {
+    "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/tea-diagnose/tea-diagnose/TeaDiagnoseApp/ContentView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/tea-diagnose/tea-diagnose/TeaDiagnoseApp/ModelHandler.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/tea-diagnose/tea-diagnose/TeaDiagnoseApp/TeaCommentGenerator.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/tea-diagnose/tea-diagnose/TeaDiagnoseApp/TeaDiagnoseApp.swift"
+        }
+      ],
+      "outputFilePath" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/sources"
+    },
+    "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageDiscoveredTests.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageDiscoveredTests.derived/TeaDiagnoseTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageDiscoveredTests.derived/all-discovered-tests.swift"
+        }
+      ],
+      "outputFilePath" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageDiscoveredTests.build/sources"
+    },
+    "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageTests.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageTests.derived/runner.swift"
+        }
+      ],
+      "outputFilePath" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageTests.build/sources"
+    },
+    "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageTests.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/ContentView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/ModelHandler.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/TeaCommentGenerator.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/TeaDiagnose.swiftmodule.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/TeaDiagnoseApp.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageDiscoveredTests.build/TeaDiagnosePackageDiscoveredTests.swiftmodule.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageDiscoveredTests.build/TeaDiagnoseTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageDiscoveredTests.build/all-discovered-tests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageTests.build/TeaDiagnosePackageTests.swiftmodule.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageTests.build/runner.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnoseTests.build/TeaDiagnoseAppTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnoseTests.build/TeaDiagnoseTests.swiftmodule.o"
+        }
+      ],
+      "outputFilePath" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageTests.product/Objects.LinkFileList"
+    },
+    "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnoseTests.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/tea-diagnose/tea-diagnose/TeaDiagnoseAppTests/TeaDiagnoseAppTests.swift"
+        }
+      ],
+      "outputFilePath" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnoseTests.build/sources"
+    },
+    "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/swift-version--1BFCD5C06E9F820A.txt" : {
+      "alwaysOutOfDate" : true,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<swift-get-version>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/usr/share/swift/usr/bin/swiftc"
+        }
+      ],
+      "outputFilePath" : "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/swift-version--1BFCD5C06E9F820A.txt"
+    }
+  }
+}

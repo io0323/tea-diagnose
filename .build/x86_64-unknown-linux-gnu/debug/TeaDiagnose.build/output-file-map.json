@@ -1,0 +1,29 @@
+{
+  "": {
+    "swift-dependencies": "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/master.swiftdeps"
+  },
+  "/home/runner/work/tea-diagnose/tea-diagnose/TeaDiagnoseApp/ContentView.swift": {
+    "dependencies": "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/ContentView.d",
+    "object": "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/ContentView.swift.o",
+    "swiftmodule": "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/ContentView~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/ContentView.swiftdeps"
+  },
+  "/home/runner/work/tea-diagnose/tea-diagnose/TeaDiagnoseApp/ModelHandler.swift": {
+    "dependencies": "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/ModelHandler.d",
+    "object": "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/ModelHandler.swift.o",
+    "swiftmodule": "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/ModelHandler~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/ModelHandler.swiftdeps"
+  },
+  "/home/runner/work/tea-diagnose/tea-diagnose/TeaDiagnoseApp/TeaCommentGenerator.swift": {
+    "dependencies": "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/TeaCommentGenerator.d",
+    "object": "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/TeaCommentGenerator.swift.o",
+    "swiftmodule": "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/TeaCommentGenerator~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/TeaCommentGenerator.swiftdeps"
+  },
+  "/home/runner/work/tea-diagnose/tea-diagnose/TeaDiagnoseApp/TeaDiagnoseApp.swift": {
+    "dependencies": "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/TeaDiagnoseApp.d",
+    "object": "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/TeaDiagnoseApp.swift.o",
+    "swiftmodule": "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/TeaDiagnoseApp~partial.swiftmodule",
+    "swift-dependencies": "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/TeaDiagnoseApp.swiftdeps"
+  }
+}

@@ -1,0 +1,164 @@
+client:
+  name: basic
+  file-system: device-agnostic
+tools: {}
+targets:
+  "PackageStructure": ["<PackageStructure>"]
+  "TeaDiagnose-x86_64-unknown-linux-gnu-debug.module": ["<TeaDiagnose-x86_64-unknown-linux-gnu-debug.module>"]
+  "TeaDiagnosePackageDiscoveredTests-x86_64-unknown-linux-gnu-debug.module": ["<TeaDiagnosePackageDiscoveredTests-x86_64-unknown-linux-gnu-debug.module>"]
+  "TeaDiagnosePackageTests-x86_64-unknown-linux-gnu-debug.module": ["<TeaDiagnosePackageTests-x86_64-unknown-linux-gnu-debug.module>"]
+  "TeaDiagnosePackageTests-x86_64-unknown-linux-gnu-debug.test": ["<TeaDiagnosePackageTests-x86_64-unknown-linux-gnu-debug.test>"]
+  "TeaDiagnoseTests-x86_64-unknown-linux-gnu-debug.module": ["<TeaDiagnoseTests-x86_64-unknown-linux-gnu-debug.module>"]
+  "main": ["<TeaDiagnose-x86_64-unknown-linux-gnu-debug.module>"]
+  "test": ["<TeaDiagnose-x86_64-unknown-linux-gnu-debug.module>","<TeaDiagnosePackageTests-x86_64-unknown-linux-gnu-debug.test>","<TeaDiagnoseTests-x86_64-unknown-linux-gnu-debug.module>"]
+default: "main"
+nodes:
+  "/home/runner/work/tea-diagnose/tea-diagnose/TeaDiagnoseApp/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/home/runner/work/tea-diagnose/tea-diagnose/TeaDiagnoseAppTests/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+commands:
+  "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/TeaDiagnose.swiftmodule.o":
+    tool: shell
+    inputs: ["/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/Modules/TeaDiagnose.swiftmodule"]
+    outputs: ["/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/TeaDiagnose.swiftmodule.o"]
+    description: "Wrapping AST for TeaDiagnose for debugging"
+    args: ["/usr/share/swift/usr/bin/swiftc","-modulewrap","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/Modules/TeaDiagnose.swiftmodule","-o","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/TeaDiagnose.swiftmodule.o","-target","x86_64-unknown-linux-gnu"]
+
+  "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/home/runner/work/tea-diagnose/tea-diagnose/TeaDiagnoseApp/ContentView.swift","/home/runner/work/tea-diagnose/tea-diagnose/TeaDiagnoseApp/ModelHandler.swift","/home/runner/work/tea-diagnose/tea-diagnose/TeaDiagnoseApp/TeaCommentGenerator.swift","/home/runner/work/tea-diagnose/tea-diagnose/TeaDiagnoseApp/TeaDiagnoseApp.swift"]
+    outputs: ["/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/sources"]
+    description: "Write auxiliary file /home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/sources"
+
+  "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageDiscoveredTests.build/TeaDiagnosePackageDiscoveredTests.swiftmodule.o":
+    tool: shell
+    inputs: ["/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/Modules/TeaDiagnosePackageDiscoveredTests.swiftmodule"]
+    outputs: ["/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageDiscoveredTests.build/TeaDiagnosePackageDiscoveredTests.swiftmodule.o"]
+    description: "Wrapping AST for TeaDiagnosePackageDiscoveredTests for debugging"
+    args: ["/usr/share/swift/usr/bin/swiftc","-modulewrap","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/Modules/TeaDiagnosePackageDiscoveredTests.swiftmodule","-o","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageDiscoveredTests.build/TeaDiagnosePackageDiscoveredTests.swiftmodule.o","-target","x86_64-unknown-linux-gnu"]
+
+  "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageDiscoveredTests.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageDiscoveredTests.derived/TeaDiagnoseTests.swift","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageDiscoveredTests.derived/all-discovered-tests.swift"]
+    outputs: ["/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageDiscoveredTests.build/sources"]
+    description: "Write auxiliary file /home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageDiscoveredTests.build/sources"
+
+  "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageDiscoveredTests.derived/all-discovered-tests.swift":
+    tool: test-discovery-tool
+    inputs: ["/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnoseTests.build/TeaDiagnoseAppTests.swift.o"]
+    outputs: ["/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageDiscoveredTests.derived/TeaDiagnoseTests.swift","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageDiscoveredTests.derived/all-discovered-tests.swift"]
+
+  "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageTests.build/TeaDiagnosePackageTests.swiftmodule.o":
+    tool: shell
+    inputs: ["/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/Modules/TeaDiagnosePackageTests.swiftmodule"]
+    outputs: ["/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageTests.build/TeaDiagnosePackageTests.swiftmodule.o"]
+    description: "Wrapping AST for TeaDiagnosePackageTests for debugging"
+    args: ["/usr/share/swift/usr/bin/swiftc","-modulewrap","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/Modules/TeaDiagnosePackageTests.swiftmodule","-o","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageTests.build/TeaDiagnosePackageTests.swiftmodule.o","-target","x86_64-unknown-linux-gnu"]
+
+  "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageTests.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageTests.derived/runner.swift"]
+    outputs: ["/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageTests.build/sources"]
+    description: "Write auxiliary file /home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageTests.build/sources"
+
+  "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageTests.derived/runner.swift":
+    tool: test-entry-point-tool
+    inputs: ["/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/Modules/TeaDiagnosePackageDiscoveredTests.swiftmodule"]
+    outputs: ["/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageTests.derived/runner.swift"]
+
+  "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageTests.product/Objects.LinkFileList":
+    tool: write-auxiliary-file
+    inputs: ["<link-file-list>","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/ContentView.swift.o","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/ModelHandler.swift.o","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/TeaCommentGenerator.swift.o","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/TeaDiagnose.swiftmodule.o","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/TeaDiagnoseApp.swift.o","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageDiscoveredTests.build/TeaDiagnosePackageDiscoveredTests.swiftmodule.o","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageDiscoveredTests.build/TeaDiagnoseTests.swift.o","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageDiscoveredTests.build/all-discovered-tests.swift.o","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageTests.build/TeaDiagnosePackageTests.swiftmodule.o","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageTests.build/runner.swift.o","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnoseTests.build/TeaDiagnoseAppTests.swift.o","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnoseTests.build/TeaDiagnoseTests.swiftmodule.o"]
+    outputs: ["/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageTests.product/Objects.LinkFileList"]
+    description: "Write auxiliary file /home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageTests.product/Objects.LinkFileList"
+
+  "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnoseTests.build/TeaDiagnoseTests.swiftmodule.o":
+    tool: shell
+    inputs: ["/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/Modules/TeaDiagnoseTests.swiftmodule"]
+    outputs: ["/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnoseTests.build/TeaDiagnoseTests.swiftmodule.o"]
+    description: "Wrapping AST for TeaDiagnoseTests for debugging"
+    args: ["/usr/share/swift/usr/bin/swiftc","-modulewrap","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/Modules/TeaDiagnoseTests.swiftmodule","-o","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnoseTests.build/TeaDiagnoseTests.swiftmodule.o","-target","x86_64-unknown-linux-gnu"]
+
+  "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnoseTests.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/home/runner/work/tea-diagnose/tea-diagnose/TeaDiagnoseAppTests/TeaDiagnoseAppTests.swift"]
+    outputs: ["/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnoseTests.build/sources"]
+    description: "Write auxiliary file /home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnoseTests.build/sources"
+
+  "/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/swift-version--1BFCD5C06E9F820A.txt":
+    tool: write-auxiliary-file
+    inputs: ["<swift-get-version>","/usr/share/swift/usr/bin/swiftc"]
+    outputs: ["/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/swift-version--1BFCD5C06E9F820A.txt"]
+    always-out-of-date: "true"
+    description: "Write auxiliary file /home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/swift-version--1BFCD5C06E9F820A.txt"
+
+  "<TeaDiagnose-x86_64-unknown-linux-gnu-debug.module>":
+    tool: phony
+    inputs: ["/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/ContentView.swift.o","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/ModelHandler.swift.o","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/TeaCommentGenerator.swift.o","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/TeaDiagnoseApp.swift.o","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/Modules/TeaDiagnose.swiftmodule"]
+    outputs: ["<TeaDiagnose-x86_64-unknown-linux-gnu-debug.module>"]
+
+  "<TeaDiagnosePackageDiscoveredTests-x86_64-unknown-linux-gnu-debug.module>":
+    tool: phony
+    inputs: ["/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageDiscoveredTests.build/TeaDiagnoseTests.swift.o","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageDiscoveredTests.build/all-discovered-tests.swift.o","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/Modules/TeaDiagnosePackageDiscoveredTests.swiftmodule"]
+    outputs: ["<TeaDiagnosePackageDiscoveredTests-x86_64-unknown-linux-gnu-debug.module>"]
+
+  "<TeaDiagnosePackageTests-x86_64-unknown-linux-gnu-debug.module>":
+    tool: phony
+    inputs: ["/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageTests.build/runner.swift.o","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/Modules/TeaDiagnosePackageTests.swiftmodule"]
+    outputs: ["<TeaDiagnosePackageTests-x86_64-unknown-linux-gnu-debug.module>"]
+
+  "<TeaDiagnosePackageTests-x86_64-unknown-linux-gnu-debug.test>":
+    tool: phony
+    inputs: ["/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageTests.xctest"]
+    outputs: ["<TeaDiagnosePackageTests-x86_64-unknown-linux-gnu-debug.test>"]
+
+  "<TeaDiagnoseTests-x86_64-unknown-linux-gnu-debug.module>":
+    tool: phony
+    inputs: ["/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnoseTests.build/TeaDiagnoseAppTests.swift.o","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/Modules/TeaDiagnoseTests.swiftmodule"]
+    outputs: ["<TeaDiagnoseTests-x86_64-unknown-linux-gnu-debug.module>"]
+
+  "C.TeaDiagnose-x86_64-unknown-linux-gnu-debug.module":
+    tool: shell
+    inputs: ["/home/runner/work/tea-diagnose/tea-diagnose/TeaDiagnoseApp/ContentView.swift","/home/runner/work/tea-diagnose/tea-diagnose/TeaDiagnoseApp/ModelHandler.swift","/home/runner/work/tea-diagnose/tea-diagnose/TeaDiagnoseApp/TeaCommentGenerator.swift","/home/runner/work/tea-diagnose/tea-diagnose/TeaDiagnoseApp/TeaDiagnoseApp.swift","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/swift-version--1BFCD5C06E9F820A.txt","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/sources"]
+    outputs: ["/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/ContentView.swift.o","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/ModelHandler.swift.o","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/TeaCommentGenerator.swift.o","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/TeaDiagnoseApp.swift.o","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/Modules/TeaDiagnose.swiftmodule"]
+    description: "Compiling Swift Module 'TeaDiagnose' (4 sources)"
+    args: ["/usr/share/swift/usr/bin/swiftc","-module-name","TeaDiagnose","-emit-dependencies","-emit-module","-emit-module-path","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/Modules/TeaDiagnose.swiftmodule","-output-file-map","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/output-file-map.json","-parse-as-library","-incremental","-c","@/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/sources","-I","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/Modules","-target","x86_64-unknown-linux-gnu","-v","-enable-batch-mode","-index-store-path","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/index/store","-Onone","-enable-testing","-j4","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/ModuleCache","-parseable-output","-parse-as-library","-color-diagnostics","-swift-version","5","-g","-Xcc","-fPIC","-Xcc","-g","-Xcc","-fno-omit-frame-pointer"]
+
+  "C.TeaDiagnosePackageDiscoveredTests-x86_64-unknown-linux-gnu-debug.module":
+    tool: shell
+    inputs: ["/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageDiscoveredTests.derived/TeaDiagnoseTests.swift","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageDiscoveredTests.derived/all-discovered-tests.swift","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/swift-version--1BFCD5C06E9F820A.txt","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/Modules/TeaDiagnoseTests.swiftmodule","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageDiscoveredTests.build/sources"]
+    outputs: ["/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageDiscoveredTests.build/TeaDiagnoseTests.swift.o","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageDiscoveredTests.build/all-discovered-tests.swift.o","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/Modules/TeaDiagnosePackageDiscoveredTests.swiftmodule"]
+    description: "Compiling Swift Module 'TeaDiagnosePackageDiscoveredTests' (2 sources)"
+    args: ["/usr/share/swift/usr/bin/swiftc","-module-name","TeaDiagnosePackageDiscoveredTests","-emit-dependencies","-emit-module","-emit-module-path","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/Modules/TeaDiagnosePackageDiscoveredTests.swiftmodule","-output-file-map","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageDiscoveredTests.build/output-file-map.json","-parse-as-library","-incremental","-c","@/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageDiscoveredTests.build/sources","-I","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/Modules","-target","x86_64-unknown-linux-gnu","-v","-enable-batch-mode","-index-store-path","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/index/store","-Onone","-enable-testing","-Xfrontend","-enable-cross-import-overlays","-j4","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/ModuleCache","-parseable-output","-parse-as-library","-color-diagnostics","-g","-Xcc","-fPIC","-Xcc","-g","-Xcc","-fno-omit-frame-pointer"]
+
+  "C.TeaDiagnosePackageTests-x86_64-unknown-linux-gnu-debug.module":
+    tool: shell
+    inputs: ["/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageTests.derived/runner.swift","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/swift-version--1BFCD5C06E9F820A.txt","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/Modules/TeaDiagnoseTests.swiftmodule","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/Modules/TeaDiagnosePackageDiscoveredTests.swiftmodule","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageTests.build/sources"]
+    outputs: ["/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageTests.build/runner.swift.o","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/Modules/TeaDiagnosePackageTests.swiftmodule"]
+    description: "Compiling Swift Module 'TeaDiagnosePackageTests' (1 sources)"
+    args: ["/usr/share/swift/usr/bin/swiftc","-module-name","TeaDiagnosePackageTests","-emit-dependencies","-emit-module","-emit-module-path","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/Modules/TeaDiagnosePackageTests.swiftmodule","-output-file-map","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageTests.build/output-file-map.json","-parse-as-library","-incremental","-c","@/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageTests.build/sources","-I","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/Modules","-target","x86_64-unknown-linux-gnu","-v","-enable-batch-mode","-index-store-path","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/index/store","-Onone","-enable-testing","-Xfrontend","-enable-cross-import-overlays","-j4","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/ModuleCache","-parseable-output","-parse-as-library","-color-diagnostics","-g","-Xcc","-fPIC","-Xcc","-g","-Xcc","-fno-omit-frame-pointer"]
+
+  "C.TeaDiagnosePackageTests-x86_64-unknown-linux-gnu-debug.test":
+    tool: shell
+    inputs: ["/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/ContentView.swift.o","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/ModelHandler.swift.o","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/TeaCommentGenerator.swift.o","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/TeaDiagnose.swiftmodule.o","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnose.build/TeaDiagnoseApp.swift.o","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageDiscoveredTests.build/TeaDiagnosePackageDiscoveredTests.swiftmodule.o","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageDiscoveredTests.build/TeaDiagnoseTests.swift.o","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageDiscoveredTests.build/all-discovered-tests.swift.o","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageTests.build/TeaDiagnosePackageTests.swiftmodule.o","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageTests.build/runner.swift.o","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnoseTests.build/TeaDiagnoseAppTests.swift.o","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnoseTests.build/TeaDiagnoseTests.swiftmodule.o","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageTests.product/Objects.LinkFileList"]
+    outputs: ["/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageTests.xctest"]
+    description: "Linking ./.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageTests.xctest"
+    args: ["/usr/share/swift/usr/bin/swiftc","-v","-L","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug","-o","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageTests.xctest","-module-name","TeaDiagnosePackageTests","-emit-executable","-Xlinker","-rpath=$ORIGIN","@/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnosePackageTests.product/Objects.LinkFileList","-target","x86_64-unknown-linux-gnu","-g"]
+
+  "C.TeaDiagnoseTests-x86_64-unknown-linux-gnu-debug.module":
+    tool: shell
+    inputs: ["/home/runner/work/tea-diagnose/tea-diagnose/TeaDiagnoseAppTests/TeaDiagnoseAppTests.swift","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/swift-version--1BFCD5C06E9F820A.txt","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/Modules/TeaDiagnose.swiftmodule","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnoseTests.build/sources"]
+    outputs: ["/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnoseTests.build/TeaDiagnoseAppTests.swift.o","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/Modules/TeaDiagnoseTests.swiftmodule"]
+    description: "Compiling Swift Module 'TeaDiagnoseTests' (1 sources)"
+    args: ["/usr/share/swift/usr/bin/swiftc","-module-name","TeaDiagnoseTests","-emit-dependencies","-emit-module","-emit-module-path","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/Modules/TeaDiagnoseTests.swiftmodule","-output-file-map","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnoseTests.build/output-file-map.json","-parse-as-library","-incremental","-c","@/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/TeaDiagnoseTests.build/sources","-I","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/Modules","-target","x86_64-unknown-linux-gnu","-v","-enable-batch-mode","-index-store-path","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/index/store","-Onone","-enable-testing","-Xfrontend","-enable-cross-import-overlays","-j4","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/home/runner/work/tea-diagnose/tea-diagnose/.build/x86_64-unknown-linux-gnu/debug/ModuleCache","-parseable-output","-parse-as-library","-color-diagnostics","-swift-version","5","-g","-Xcc","-fPIC","-Xcc","-g","-Xcc","-fno-omit-frame-pointer"]
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/home/runner/work/tea-diagnose/tea-diagnose/TeaDiagnoseApp/","/home/runner/work/tea-diagnose/tea-diagnose/TeaDiagnoseAppTests/","/home/runner/work/tea-diagnose/tea-diagnose/Package.swift","/home/runner/work/tea-diagnose/tea-diagnose/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+
