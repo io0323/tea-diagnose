@@ -11,17 +11,13 @@ on:
 
 jobs:
   build:
-    
     runs-on: macos-latest
-    
     steps:
     - uses: actions/checkout@v4
-    
     - name: List available simulators
       run: xcrun simctl list devices
-    
     - name: Build
-      run: xcodebuild -project TeaDiagnoseApp.xcodeproj -scheme TeaDiagnoseApp -destination 'platform=iOS Simulator,name=iPhone 14,OS=latest' build
-    
+      run: xcodebuild -project TeaDiagnoseApp.xcodeproj -scheme TeaDiagnoseApp -destination 'platform=iOS Simulator,name=iPhone 14,OS=17.4' build
     - name: Run tests
-      run: xcodebuild test -project TeaDiagnoseApp.xcodeproj -scheme TeaDiagnoseApp -destination 'platform=iOS Simulator,name=iPhone 14,OS=latest'
+      run: xcodebuild test -project TeaDiagnoseApp.xcodeproj -scheme TeaDiagnoseApp -destination 'platform=iOS Simulator,name=iPhone 14,OS=17.4'
+
