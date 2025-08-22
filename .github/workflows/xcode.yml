@@ -1,0 +1,79 @@
+name: Xcode CI
+
+# GitHub Actions workflow for Xcode project
+# This workflow builds and tests the TeaDiagnose app on both iOS and macOS platforms
+# 
+# To change the scheme name to "tea-diagnose":
+# 1. In Xcode, rename the scheme from "TeaDiagnoseApp" to "tea-diagnose"
+# 2. Update the SCHEME_NAME environment variable below
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+env:
+  PROJECT_NAME: TeaDiagnoseApp
+  SCHEME_NAME: TeaDiagnoseApp  # Change this to "tea-diagnose" if the scheme is renamed
+
+jobs:
+  build-and-test:
+    runs-on: macos-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Xcode
+      uses: maxim-lobanov/setup-xcode@v1
+      with:
+        xcode-version: latest-stable
+        
+    - name: Cache DerivedData
+      uses: actions/cache@v4
+      with:
+        path: ~/Library/Developer/Xcode/DerivedData
+        key: ${{ runner.os }}-deriveddata-${{ hashFiles('**/*.xcodeproj/project.pbxproj') }}
+        restore-keys: |
+          ${{ runner.os }}-deriveddata-
+        
+    - name: List available schemes
+      run: |
+        xcodebuild -project ${{ env.PROJECT_NAME }}.xcodeproj -list
+        
+    - name: Build for iOS Simulator
+      run: |
+        xcodebuild -project ${{ env.PROJECT_NAME }}.xcodeproj \
+          -scheme ${{ env.SCHEME_NAME }} \
+          -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest' \
+          -configuration Debug \
+          CODE_SIGNING_ALLOWED=NO \
+          build
+          
+    - name: Build for macOS
+      run: |
+        xcodebuild -project ${{ env.PROJECT_NAME }}.xcodeproj \
+          -scheme ${{ env.SCHEME_NAME }} \
+          -destination 'platform=macOS' \
+          -configuration Debug \
+          CODE_SIGNING_ALLOWED=NO \
+          build
+          
+    - name: Run Unit Tests (iOS)
+      run: |
+        xcodebuild -project ${{ env.PROJECT_NAME }}.xcodeproj \
+          -scheme ${{ env.SCHEME_NAME }} \
+          -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest' \
+          -configuration Debug \
+          CODE_SIGNING_ALLOWED=NO \
+          test
+          
+    - name: Run Unit Tests (macOS)
+      run: |
+        xcodebuild -project ${{ env.PROJECT_NAME }}.xcodeproj \
+          -scheme ${{ env.SCHEME_NAME }} \
+          -destination 'platform=macOS' \
+          -configuration Debug \
+          CODE_SIGNING_ALLOWED=NO \
+          test
