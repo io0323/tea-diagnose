@@ -11,19 +11,12 @@ on:
 
 jobs:
   build:
-    
-    runs-on: macos-14
-    
+    runs-on: macos-latest
     steps:
     - uses: actions/checkout@v4
-    
-    - name: Set up Xcode
-      uses: maxim-lobanov/setup-xcode@v1
-      with:
-        xcode-version: '15.2'
-    
+    - name: List available simulators
+      run: xcrun simctl list devices
     - name: Build
-      run: xcodebuild -project TeaDiagnoseApp.xcodeproj -scheme TeaDiagnoseApp -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest' build
-    
+      run: xcodebuild -project TeaDiagnoseApp.xcodeproj -scheme TeaDiagnoseApp -destination 'platform=iOS Simulator,name=iPhone 15,OS=18.2' build
     - name: Run tests
-      run: xcodebuild test -project TeaDiagnoseApp.xcodeproj -scheme TeaDiagnoseApp -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest'
+      run: xcodebuild test -project TeaDiagnoseApp.xcodeproj -scheme TeaDiagnoseApp -destination 'platform=iOS Simulator,name=iPhone 15,OS=18.2'
