@@ -17,6 +17,6 @@ jobs:
     - name: List available simulators
       run: xcrun simctl list devices
     - name: Build
-      run: xcodebuild -project TeaDiagnoseApp.xcodeproj -scheme TeaDiagnoseApp -destination 'platform=iOS Simulator,name=iPhone 14,OS=17.2' build
+      run: xcodebuild -project TeaDiagnoseApp.xcodeproj -scheme TeaDiagnoseApp -destination 'platform=iOS Simulator,name=iPhone 14,OS=17.0' build
     - name: Run tests
-      run: xcodebuild test -project TeaDiagnoseApp.xcodeproj -scheme TeaDiagnoseApp -destination 'platform=iOS Simulator,name=iPhone 14,OS=17.2'
+      run: xcodebuild test -project TeaDiagnoseApp.xcodeproj -scheme TeaDiagnoseApp -destination 'platform=iOS Simulator,name=iPhone 14,OS=17.0'
